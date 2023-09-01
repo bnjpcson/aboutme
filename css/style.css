@@ -1,3 +1,25 @@
 body{
     font-family: 'Poppins';
+    background-color: #283149;
+}
+
+a, p, h1, h2, h3, h4, h5, h6{
+    color: white !important;
+}
+
+.navbar{
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.navbar-brand{
+    padding: 5px 20px;
+    color: white;
+    background-color: transparent;
+    letter-spacing: 5px;
+    font-size: 15px;
+    border: 3px solid #DBEDF3;
+}
+.nav-link{
+    cursor: pointer;
 }
