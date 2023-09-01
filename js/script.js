@@ -28,7 +28,7 @@ var doc = document;
 //   });
 // }
 
-function scrollToPage(page){
+function scrollToPage(page) {
     var element = doc.getElementById(page);
     element.scrollIntoView();
 }
