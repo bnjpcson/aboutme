@@ -1,5 +1,4 @@
 // alert("hello");
-var doc = document;
 
 // doc.getElementById('image').addEventListener('click', (ev) => {
 //     alert("Hello World");
@@ -29,6 +28,37 @@ var doc = document;
 // }
 
 function scrollToPage(page) {
-    var element = doc.getElementById(page);
-    element.scrollIntoView();
+  var element = document.getElementById(page);
+  element.scrollIntoView();
 }
+
+const home = document.getElementById("navhome");
+const about = document.getElementById("navabout");
+const projects = document.getElementById("navprojects");
+const certificates = document.getElementById("navcertificates");
+
+function toggleNav(id) {
+  home.classList.remove("active");
+  about.classList.remove("active");
+  projects.classList.remove("active");
+  certificates.classList.remove("active");
+
+  switch (id) {
+    case "home":
+      home.classList.add("active");
+      break;
+    case "about":
+      about.classList.add("active");
+      break;
+    case "projects":
+      projects.classList.add("active");
+      break;
+    case "certificates":
+      certificates.classList.add("active");
+      break;
+  }
+  console.log(id);
+}
+
+let date = new Date();
+document.getElementById("date").innerHTML = date.getFullYear();
