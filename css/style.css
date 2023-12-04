@@ -1,6 +1,7 @@
 body {
   font-family: "Poppins";
   background-color: #283149;
+  font-size: 15px;
 }
 
 .main {
@@ -16,20 +17,26 @@ body {
 }
 
 #home {
-  scroll-margin-top: 65px;
+  scroll-margin-top: 100px;
   padding-top: 65px;
-  background-color: #4a5266;
+  /* background-color: #4a5266; */
 }
 
 #about {
-  scroll-margin-top: 65px;
+  scroll-margin-top: 100px;
 }
 
 #projects {
-  scroll-margin-top: 65px;
-  background-color: #4a5266;
+  scroll-margin-top: 100px;
+  /* background-color: #4a5266; */
 }
 
 #certificates {
-  scroll-margin-top: 65px;
+  scroll-margin-top: 100px;
+}
+
+.card{
+  box-shadow: 0 1rem 3rem rgba(#000, .175);
+  background-color: transparent;
+  border-color: #4A5266;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
@@ -23,6 +23,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -53,41 +55,26 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0 p-1">
+            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0 p-1" id="myNav">
               <li class="nav-item">
                 <a
                   id="navhome"
                   class="nav-link active"
                   aria-current="page"
                   href="#home"
-                  onclick="toggleNav('home')"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a
-                  id="navabout"
-                  class="nav-link"
-                  href="#about"
-                  onclick="toggleNav('about')"
-                  >About</a
-                >
+                <a id="navabout" class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a
-                  id="navprojects"
-                  class="nav-link"
-                  href="#projects"
-                  onclick="toggleNav('projects')"
+                <a id="navprojects" class="nav-link" href="#projects"
                   >Projects</a
                 >
               </li>
               <li class="nav-item">
-                <a
-                  id="navcertificates"
-                  class="nav-link"
-                  href="#certificates"
-                  onclick="toggleNav('certificates')"
+                <a id="navcertificates" class="nav-link" href="#certificates"
                   >Certificates</a
                 >
               </li>
@@ -97,10 +84,10 @@
       </nav>
     </div>
 
-    <div class="main">
-      <div id="home" class="container-fluid min-vh-100">
-        <div class="row min-vh-100">
-          <div class="col-md-6" style="padding-left: 10%; margin-top: 5%">
+    <div class="main col-lg-8 mx-auto px-3">
+      <section id="home" class="container-fluid min-vh-100">
+        <div class="row">
+          <div class="col-md-6" style="padding-left: 10%; margin-top: 10%">
             <h1 class="mt-5" style="font-weight: 700; font-size: 48px">
               Web & Mobile
             </h1>
@@ -110,57 +97,296 @@
               >Hi! I'm Benjie, specialized in web and mobile technologies.</span
             >
             <div>
-
               <a class="btn btn-outline-light me-3 mt-3" href="#projects"
                 >View my projects</a
               >
-              <a class="btn btn-outline-info me-3 mt-3" target="_blank" href="./assets/files/Resume_BP.pdf"
+              <a
+                class="btn btn-outline-info me-3 mt-3"
+                target="_blank"
+                href="./assets/files/Resume_BP.pdf"
                 >Download CV</a
               >
             </div>
           </div>
           <div class="col-md-6 mt-5 text-center d-none d-md-block">
             <img
-              class="mt-5 img-fluid w-50"
-              src="./assets/images/coding.svg"
-              alt="coding"
+              class="mt-5 img-fluid w-75 rounded-circle"
+              src="./assets/images/image1.jpg"
+              alt="..."
             />
           </div>
         </div>
-      </div>
-
-      <div id="about" class="container-fluid min-vh-100">
-        <div class="row">
-          <h1 class="text-center my-5">About Me</h1>
-          <div class="col-sm-12 col-md-6 mx-auto text-center"></div>
-          <div class="col-sm-12 col-md-6 mx-auto text-center mt-3"></div>
+        <div
+          class="row d-flex justify-content-around"
+          style="margin-top: 110px"
+        >
+          <div class="col-3 text-center">
+            <a class="text-white" href="https://www.linkedin.com/in/bnjpcson/">
+              <i class="fa fa-linkedin" style="font-size: 30px"></i
+            ></a>
+          </div>
+          <div class="col-3 text-center">
+            <a class="text-white" href="https://www.linkedin.com/in/bnjpcson/">
+              <i class="fa fa-github" style="font-size: 30px"></i>
+            </a>
+          </div>
+          <div class="col-3 text-center">
+            <a class="text-white" href="https://www.facebook.com/bnjpcson/">
+              <i class="fa fa-facebook" style="font-size: 30px"></i>
+            </a>
+          </div>
+          <div class="col-3 text-center">
+            <a class="text-white" href="https://www.instagram.com/bnjpcson/">
+              <i class="fa fa-instagram" style="font-size: 30px"></i>
+            </a>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div id="projects" class="container-fluid min-vh-100">
-        <div class="row">
-          <h1 class="text-center my-5">Projects</h1>
-          <div class="col-sm-12 col-md-6 mx-auto text-center"></div>
-          <div class="col-sm-12 col-md-6 mx-auto text-center mt-3"></div>
+      <section id="about" class="container min-vh-100 mt-5">
+        <div class="row" data-aos="fade-down" data-aos-duration="1500">
+          <h1 class=""><span class="text-warning">#</span>About Me</h1>
+          <hr />
+          <p class="mx-auto text-light">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+            cupiditate illum facilis quam quos officia, similique sequi soluta
+            natus mollitia assumenda optio quibusdam ea cum, nisi at expedita
+            dicta magnam.
+            <br /><br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            quisquam dicta officiis nam fugit at animi tempora pariatur quis
+            unde vel cupiditate, repellendus et totam odit ex corrupti assumenda
+            quos.
+          </p>
+          <!-- <p class="mx-auto text-light">
+            Hello! I'm Benjie, specializing in web and mobile technologies. I
+            recently graduated in Pangasinan State University - Urdaneta City
+            Campus with a Bachelor of Science in Information Technology,
+            majoring in Web and Mobile technologies. I am deeply passionate
+            about technology and continuously seek opportunities to enhance my
+            knowledge and skills in this field.
+          </p> -->
         </div>
-      </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-code" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text h5">Lorem Ipsum</p>
+                <p class="text-white-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit perspiciatis architecto dolores sed explicabo
+                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                  accusantium nobis vel at, harum nostrum dolore?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-code" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text h5">Lorem Ipsum</p>
+                <p class="text-white-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit perspiciatis architecto dolores sed explicabo
+                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                  accusantium nobis vel at, harum nostrum dolore?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-code" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text h5">Lorem Ipsum</p>
+                <p class="text-white-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit perspiciatis architecto dolores sed explicabo
+                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                  accusantium nobis vel at, harum nostrum dolore?
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-code" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text">Writing Clean and Efficient Code</p>
+                <p>
+                  I'm deeply passionate about coding and creating clean and
+                  efficient algorithms that solve complex problems.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-rocket" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text">Aspiring Web and Mobile Developer</p>
+                <p>
+                  I am on a journey to become a proficient Web and Mobile
+                  Developer, driven by a love for coding and a commitment to
+                  staying on the cutting edge of technology.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-puzzle-piece" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text">
+                  Adaptable Collaborator and Independent Contributor
+                </p>
+                <p>
+                  I can work both in team environments and as an independent
+                  contributor, ensuring efficient and successful outcomes in
+                  every project.
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
 
-      <div id="certificates" class="container-fluid min-vh-100">
-        <div class="row">
-          <h1 class="text-center my-5">Certificates</h1>
-          <div class="col-sm-12 col-md-6 mx-auto text-center"></div>
-          <div class="col-sm-12 col-md-6 mx-auto text-center mt-3"></div>
+      <section id="projects" class="container-fluid min-vh-100 mt-5">
+        <div class="row" data-aos="fade-down" data-aos-duration="1500">
+          <h1 class=""><span class="text-warning">#</span>Projects</h1>
+          <hr />
         </div>
-      </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-code" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text h5">Lorem Ipsum</p>
+                <p class="text-white-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit perspiciatis architecto dolores sed explicabo
+                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                  accusantium nobis vel at, harum nostrum dolore?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-code" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text h5">Lorem Ipsum</p>
+                <p class="text-white-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit perspiciatis architecto dolores sed explicabo
+                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                  accusantium nobis vel at, harum nostrum dolore?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-code" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text h5">Lorem Ipsum</p>
+                <p class="text-white-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit perspiciatis architecto dolores sed explicabo
+                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                  accusantium nobis vel at, harum nostrum dolore?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div id="footer" class="container-fluid bg-light text-dark">
-        <div class="row">
-          <span class="text-center my-2"
-            >​© <span id="date"></span> Benjie Pecson. All Rights Reserved</span
-          >
+      <section id="certificates" class="container-fluid min-vh-100 mt-5">
+        <div class="row" data-aos="fade-down" data-aos-duration="1500">
+          <h1 class=""><span class="text-warning">#</span>Certificates</h1>
+          <hr />
         </div>
-      </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-code" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text h5">Lorem Ipsum</p>
+                <p class="text-white-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit perspiciatis architecto dolores sed explicabo
+                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                  accusantium nobis vel at, harum nostrum dolore?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-code" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text h5">Lorem Ipsum</p>
+                <p class="text-white-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit perspiciatis architecto dolores sed explicabo
+                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                  accusantium nobis vel at, harum nostrum dolore?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="fa fa-code" style="font-size: 48px"></i>
+                </h5>
+                <p class="card-text h5">Lorem Ipsum</p>
+                <p class="text-white-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit perspiciatis architecto dolores sed explicabo
+                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                  accusantium nobis vel at, harum nostrum dolore?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+
+    <footer id="footer" class="container-fluid bg-light text-dark">
+      <div class="row">
+        <span class="text-center my-2"
+          >​© <span id="date"></span> <strong>Benjie Pecson</strong>. All Rights Reserved</span
+        >
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -173,7 +399,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/script.js"></script>
-
-    <script></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

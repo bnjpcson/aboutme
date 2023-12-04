@@ -27,38 +27,53 @@
 //   });
 // }
 
-function scrollToPage(page) {
-  var element = document.getElementById(page);
-  element.scrollIntoView();
-}
+// function scrollToPage(page) {
+//   var element = document.getElementById(page);
+//   element.scrollIntoView();
+// }
 
-const home = document.getElementById("navhome");
-const about = document.getElementById("navabout");
-const projects = document.getElementById("navprojects");
-const certificates = document.getElementById("navcertificates");
+// const home = document.getElementById("navhome");
+// const about = document.getElementById("navabout");
+// const projects = document.getElementById("navprojects");
+// const certificates = document.getElementById("navcertificates");
 
-function toggleNav(id) {
-  home.classList.remove("active");
-  about.classList.remove("active");
-  projects.classList.remove("active");
-  certificates.classList.remove("active");
+// function toggleNav(id) {
+//   home.classList.remove("active");
+//   about.classList.remove("active");
+//   projects.classList.remove("active");
+//   certificates.classList.remove("active");
 
-  switch (id) {
-    case "home":
-      home.classList.add("active");
-      break;
-    case "about":
-      about.classList.add("active");
-      break;
-    case "projects":
-      projects.classList.add("active");
-      break;
-    case "certificates":
-      certificates.classList.add("active");
-      break;
-  }
-  console.log(id);
-}
+//   switch (id) {
+//     case "home":
+//       home.classList.add("active");
+//       break;
+//     case "about":
+//       about.classList.add("active");
+//       break;
+//     case "projects":
+//       projects.classList.add("active");
+//       break;
+//     case "certificates":
+//       certificates.classList.add("active");
+//       break;
+//   }
+// }
+
+//scrollspy
+window.addEventListener("scroll", () => {
+  let current = "";
+  document.querySelectorAll("section").forEach((section) => {
+    let sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 100) {
+      current = section.getAttribute("id");
+    }
+  });
+  document.querySelectorAll("ul li a").forEach((li) => {
+    li.classList.remove("active");
+    document.getElementById("nav"+current).classList.add('active');
+  });
+});
+//endscrollspy
 
 let date = new Date();
 document.getElementById("date").innerHTML = date.getFullYear();
