@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta
+      name="description"
+      content="Benjie Pecson, web developer, portfolio"
+    />
+    <meta
+      name="keyword"
+      content="portfolio, web developer, Benjie Pecson, bnjpcson"
+    />
+    <title>Benjie Pecson</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
@@ -17,8 +25,6 @@
       crossorigin="anonymous"
     />
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -28,8 +34,6 @@
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
-  <!-- <body id="contextmenu" oncontextmenu="return false;"> -->
 
   <body class="text-sm-start">
     <div class="header">
@@ -84,295 +88,311 @@
       </nav>
     </div>
 
-    <div class="main col-lg-8 mx-auto px-3">
-      <section id="home" class="container-fluid min-vh-100">
-        <div class="row">
-          <div class="col-md-6" style="padding-left: 10%; margin-top: 10%">
-            <h1 class="mt-5" style="font-weight: 700; font-size: 48px">
-              Web & Mobile
-            </h1>
-            <h1 style="font-weight: 700; font-size: 48px">Developer</h1>
+    <div class="main">
+      <section id="home">
+        <div class="container-fluid col-lg-8 mx-auto min-vh-100 px-3">
+          <div class="row">
+            <div class="col-md-6" style="padding-left: 10%; margin-top: 10%">
+              <h1 class="mt-5" style="font-weight: 700; font-size: 48px">
+                Web & Mobile
+              </h1>
+              <h1 style="font-weight: 700; font-size: 48px">Developer</h1>
 
-            <span style="font-size: 32"
-              >Hi! I'm Benjie, specialized in web and mobile technologies.</span
-            >
-            <div>
-              <a class="btn btn-outline-light me-3 mt-3" href="#projects"
-                >View my projects</a
+              <span style="font-size: 32"
+                >Hi! I'm Benjie, specialized in web and mobile
+                technologies.</span
               >
+              <div>
+                <a class="btn btn-outline-light me-3 mt-3" href="#projects"
+                  >View my projects</a
+                >
+                <a
+                  class="btn btn-outline-info me-3 mt-3"
+                  target="_blank"
+                  href="./assets/files/Resume_BP.pdf"
+                  >Download CV</a
+                >
+              </div>
+            </div>
+            <div class="col-md-6 mt-5 text-center d-none d-md-block">
+              <img
+                class="mt-5 img-fluid w-75 rounded-circle"
+                src="./assets/images/image1.jpg"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div
+            class="row d-flex justify-content-around"
+            style="margin-top: 110px"
+          >
+            <div class="col-3 text-center">
               <a
-                class="btn btn-outline-info me-3 mt-3"
+                class="text-white"
+                href="https://www.linkedin.com/in/bnjpcson/"
                 target="_blank"
-                href="./assets/files/Resume_BP.pdf"
-                >Download CV</a
               >
+                <i class="fa fa-linkedin" style="font-size: 30px"></i
+              ></a>
             </div>
-          </div>
-          <div class="col-md-6 mt-5 text-center d-none d-md-block">
-            <img
-              class="mt-5 img-fluid w-75 rounded-circle"
-              src="./assets/images/image1.jpg"
-              alt="..."
-            />
-          </div>
-        </div>
-        <div
-          class="row d-flex justify-content-around"
-          style="margin-top: 110px"
-        >
-          <div class="col-3 text-center">
-            <a class="text-white"  href="https://www.linkedin.com/in/bnjpcson/" target="_blank">
-              <i class="fa fa-linkedin" style="font-size: 30px"></i
-            ></a>
-          </div>
-          <div class="col-3 text-center">
-            <a class="text-white" href="https://github.com/bnjpcson" target="_blank">
-              <i class="fa fa-github" style="font-size: 30px"></i>
-            </a>
-          </div>
-          <div class="col-3 text-center">
-            <a class="text-white" href="https://www.facebook.com/bnjpcson/" target="_blank">
-              <i class="fa fa-facebook" style="font-size: 30px"></i>
-            </a>
-          </div>
-          <div class="col-3 text-center">
-            <a class="text-white" href="https://www.instagram.com/bnjpcson/" target="_blank">
-              <i class="fa fa-instagram" style="font-size: 30px"></i>
-            </a>
+            <div class="col-3 text-center">
+              <a
+                class="text-white"
+                href="https://github.com/bnjpcson"
+                target="_blank"
+              >
+                <i class="fa fa-github" style="font-size: 30px"></i>
+              </a>
+            </div>
+            <div class="col-3 text-center">
+              <a
+                class="text-white"
+                href="https://www.facebook.com/bnjpcson/"
+                target="_blank"
+              >
+                <i class="fa fa-facebook" style="font-size: 30px"></i>
+              </a>
+            </div>
+            <div class="col-3 text-center">
+              <a
+                class="text-white"
+                href="https://www.instagram.com/bnjpcson/"
+                target="_blank"
+              >
+                <i class="fa fa-instagram" style="font-size: 30px"></i>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="about" class="container min-vh-100 mt-5">
-        <div class="row" data-aos="fade-down" data-aos-duration="1500">
-          <h1 class=""><span class="text-warning">#</span>About Me</h1>
-          <hr />
-          <p class="mx-auto text-light">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
-            cupiditate illum facilis quam quos officia, similique sequi soluta
-            natus mollitia assumenda optio quibusdam ea cum, nisi at expedita
-            dicta magnam.
-            <br /><br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            quisquam dicta officiis nam fugit at animi tempora pariatur quis
-            unde vel cupiditate, repellendus et totam odit ex corrupti assumenda
-            quos.
-          </p>
-          <!-- <p class="mx-auto text-light">
-            Hello! I'm Benjie, specializing in web and mobile technologies. I
-            recently graduated in Pangasinan State University - Urdaneta City
-            Campus with a Bachelor of Science in Information Technology,
-            majoring in Web and Mobile technologies. I am deeply passionate
-            about technology and continuously seek opportunities to enhance my
-            knowledge and skills in this field.
-          </p> -->
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-code" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text h5">Lorem Ipsum</p>
-                <p class="text-white-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit perspiciatis architecto dolores sed explicabo
-                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
-                  accusantium nobis vel at, harum nostrum dolore?
-                </p>
-              </div>
-            </div>
+      <section id="about">
+        <div class="container-fluid col-lg-8 mx-auto min-vh-100 py-5">
+          <div class="row" data-aos="fade-down" data-aos-duration="1500">
+            <h1 class=""><span class="text-warning">#</span>About Me</h1>
+            <hr />
+            
+
+            <p class="mx-auto text-light">
+              Hello! I'm Benjie, specializing in web and mobile technologies. I
+              recently graduated in Pangasinan State University - Urdaneta City
+              Campus with a Bachelor of Science in Information Technology,
+              majoring in Web and Mobile technologies. I am deeply passionate
+              about technology and continuously seek opportunities to enhance my
+              knowledge and skills in this field.
+            </p>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-code" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text h5">Lorem Ipsum</p>
-                <p class="text-white-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit perspiciatis architecto dolores sed explicabo
-                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
-                  accusantium nobis vel at, harum nostrum dolore?
-                </p>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-code" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text h5">Lorem Ipsum</p>
+                  <p class="text-white-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit perspiciatis architecto dolores sed explicabo
+                    ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                    accusantium nobis vel at, harum nostrum dolore?
+                  </p>
+                </div>
               </div>
             </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-code" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text h5">Lorem Ipsum</p>
+                  <p class="text-white-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit perspiciatis architecto dolores sed explicabo
+                    ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                    accusantium nobis vel at, harum nostrum dolore?
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-code" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text h5">Lorem Ipsum</p>
+                  <p class="text-white-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit perspiciatis architecto dolores sed explicabo
+                    ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                    accusantium nobis vel at, harum nostrum dolore?
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-code" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text">Writing Clean and Efficient Code</p>
+                  <p>
+                    I'm deeply passionate about coding and creating clean and
+                    efficient algorithms that solve complex problems.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-rocket" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text">Aspiring Web and Mobile Developer</p>
+                  <p>
+                    I am on a journey to become a proficient Web and Mobile
+                    Developer, driven by a love for coding and a commitment to
+                    staying on the cutting edge of technology.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-puzzle-piece" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text">
+                    Adaptable Collaborator and Independent Contributor
+                  </p>
+                  <p>
+                    I can work both in team environments and as an independent
+                    contributor, ensuring efficient and successful outcomes in
+                    every project.
+                  </p>
+                </div>
+              </div>
+            </div> -->
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-code" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text h5">Lorem Ipsum</p>
-                <p class="text-white-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit perspiciatis architecto dolores sed explicabo
-                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
-                  accusantium nobis vel at, harum nostrum dolore?
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-code" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text">Writing Clean and Efficient Code</p>
-                <p>
-                  I'm deeply passionate about coding and creating clean and
-                  efficient algorithms that solve complex problems.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-rocket" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text">Aspiring Web and Mobile Developer</p>
-                <p>
-                  I am on a journey to become a proficient Web and Mobile
-                  Developer, driven by a love for coding and a commitment to
-                  staying on the cutting edge of technology.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-puzzle-piece" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text">
-                  Adaptable Collaborator and Independent Contributor
-                </p>
-                <p>
-                  I can work both in team environments and as an independent
-                  contributor, ensuring efficient and successful outcomes in
-                  every project.
-                </p>
-              </div>
-            </div>
-          </div> -->
         </div>
       </section>
 
-      <section id="projects" class="container-fluid min-vh-100 mt-5">
-        <div class="row" data-aos="fade-down" data-aos-duration="1500">
-          <h1 class=""><span class="text-warning">#</span>Projects</h1>
-          <hr />
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-code" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text h5">Lorem Ipsum</p>
-                <p class="text-white-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit perspiciatis architecto dolores sed explicabo
-                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
-                  accusantium nobis vel at, harum nostrum dolore?
-                </p>
+      <section id="projects">
+        <div class="container-fluid col-lg-8 mx-auto min-vh-100 py-5">
+          <div class="row" data-aos="fade-down" data-aos-duration="1500">
+            <h1 class=""><span class="text-warning">#</span>Projects</h1>
+            <hr />
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-code" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text h5">Lorem Ipsum</p>
+                  <p class="text-white-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit perspiciatis architecto dolores sed explicabo
+                    ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                    accusantium nobis vel at, harum nostrum dolore?
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-code" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text h5">Lorem Ipsum</p>
-                <p class="text-white-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit perspiciatis architecto dolores sed explicabo
-                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
-                  accusantium nobis vel at, harum nostrum dolore?
-                </p>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-code" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text h5">Lorem Ipsum</p>
+                  <p class="text-white-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit perspiciatis architecto dolores sed explicabo
+                    ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                    accusantium nobis vel at, harum nostrum dolore?
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-code" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text h5">Lorem Ipsum</p>
-                <p class="text-white-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit perspiciatis architecto dolores sed explicabo
-                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
-                  accusantium nobis vel at, harum nostrum dolore?
-                </p>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-code" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text h5">Lorem Ipsum</p>
+                  <p class="text-white-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit perspiciatis architecto dolores sed explicabo
+                    ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                    accusantium nobis vel at, harum nostrum dolore?
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="certificates" class="container-fluid min-vh-100 mt-5">
-        <div class="row" data-aos="fade-down" data-aos-duration="1500">
-          <h1 class=""><span class="text-warning">#</span>Certificates</h1>
-          <hr />
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-code" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text h5">Lorem Ipsum</p>
-                <p class="text-white-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit perspiciatis architecto dolores sed explicabo
-                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
-                  accusantium nobis vel at, harum nostrum dolore?
-                </p>
+      <section id="certificates">
+        <div class="container-fluid col-lg-8 mx-auto min-vh-100 py-5">
+          <div class="row" data-aos="fade-down" data-aos-duration="1500">
+            <h1 class=""><span class="text-warning">#</span>Certificates</h1>
+            <hr />
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-code" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text h5">Lorem Ipsum</p>
+                  <p class="text-white-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit perspiciatis architecto dolores sed explicabo
+                    ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                    accusantium nobis vel at, harum nostrum dolore?
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-code" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text h5">Lorem Ipsum</p>
-                <p class="text-white-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit perspiciatis architecto dolores sed explicabo
-                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
-                  accusantium nobis vel at, harum nostrum dolore?
-                </p>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-code" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text h5">Lorem Ipsum</p>
+                  <p class="text-white-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit perspiciatis architecto dolores sed explicabo
+                    ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                    accusantium nobis vel at, harum nostrum dolore?
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
-            <div class="card" data-aos="zoom-in" data-aos-duration="1500">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <i class="fa fa-code" style="font-size: 48px"></i>
-                </h5>
-                <p class="card-text h5">Lorem Ipsum</p>
-                <p class="text-white-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reprehenderit perspiciatis architecto dolores sed explicabo
-                  ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
-                  accusantium nobis vel at, harum nostrum dolore?
-                </p>
+            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto text-center">
+              <div class="card" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <i class="fa fa-code" style="font-size: 48px"></i>
+                  </h5>
+                  <p class="card-text h5">Lorem Ipsum</p>
+                  <p class="text-white-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit perspiciatis architecto dolores sed explicabo
+                    ratione deleniti dicta nisi, porro maxime ab? Laudantium ea
+                    accusantium nobis vel at, harum nostrum dolore?
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -383,7 +403,8 @@
     <footer id="footer" class="container-fluid bg-light text-dark">
       <div class="row">
         <span class="text-center my-2"
-          >​© <span id="date"></span> <strong>Benjie Pecson</strong>. All Rights Reserved</span
+          >​© <span id="date"></span> <strong>Benjie Pecson</strong>. All Rights
+          Reserved</span
         >
       </div>
     </footer>
