@@ -2,7 +2,7 @@ import React from "react";
 
 const UnderConstructionComponent = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-screen gap-4 text-center">
+    <div className="flex flex-col justify-center items-center gap-4 text-center">
       <svg
         className="w-[250px] md:w-96 md:h-96"
         viewBox="0 0 752 670"
