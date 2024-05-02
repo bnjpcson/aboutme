@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import UnderConstructionComponent from "../components/UnderConstructionComponent";
-import profile from "../assets/images/image1.jpg";
+import HomeSection from "../sections/HomeSection";
 
 const HomePage = () => {
   const getTheme = () => {
@@ -12,6 +12,10 @@ const HomePage = () => {
   };
   const [theme, setTheme] = useState(getTheme());
   const [active, setActive] = useState("home");
+  const homeSection = useRef(null);
+  const aboutSection = useRef(null);
+  const projectSection = useRef(null);
+  const certificateSection = useRef(null);
 
   const sunIcon = (
     <svg
@@ -57,6 +61,13 @@ const HomePage = () => {
   };
 
   useEffect(() => {}, []);
+
+  const scrollTo = (offsetTop) => {
+    window.scrollTo({
+      top: offsetTop - 100,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
@@ -122,33 +133,37 @@ const HomePage = () => {
                 className={navStyle("home")}
                 onClick={() => {
                   setActive("home");
+                  scrollTo(homeSection.current.offsetTop);
                 }}
               >
-                <a href="#home">Home</a>
+                Home
               </li>
               <li
                 className={navStyle("about")}
                 onClick={() => {
                   setActive("about");
+                  scrollTo(aboutSection.current.offsetTop);
                 }}
               >
-                <a href="#about">About</a>
+                About
               </li>
               <li
                 className={navStyle("projects")}
                 onClick={() => {
                   setActive("projects");
+                  scrollTo(projectSection.current.offsetTop);
                 }}
               >
-                <a href="#projects">Projects</a>
+                Projects
               </li>
               <li
                 className={navStyle("certificates")}
                 onClick={() => {
                   setActive("certificates");
+                  scrollTo(certificateSection.current.offsetTop);
                 }}
               >
-                <a href="#certificates">Certificates</a>
+                Certificates
               </li>
             </ul>
             <div className="navbar-end">
@@ -163,40 +178,9 @@ const HomePage = () => {
             </div>
           </div>
 
-          <section
-            id="home"
-            className="flex flex-row justify-center md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center pt-40"
-          >
-            <div className="flex flex-col w-full gap-3">
-              <h1 className="poppins-bold text-[48px]">
-                Web & Mobile <span className="text-primary">Developer</span>
-              </h1>
-              <p className="poppins-regular text-[16px]">
-                Hi! I'm Benjie, specialized in web and mobile technologies.
-              </p>
-              <div className="flex flex-row gap-5">
-                <button
-                  className="btn btn-outline btn-info dark:btn-secondary "
-                  onClick={() => {
-                    document.getElementById("my_modal").showModal();
-                  }}
-                >
-                  View my projects
-                </button>
-                <button
-                  className="btn btn-outline btn-primary"
-                  onClick={() => {
-                    document.getElementById("my_modal").showModal();
-                  }}
-                >
-                  Download CV
-                </button>
-              </div>
-            </div>
-            <div className="sm:flex flex-col justify-center items-center w-full hidden">
-              <img className="w-[75%] rounded-full" src={profile} alt="" />
-            </div>
-          </section>
+          <div ref={homeSection}>
+            <HomeSection theme={theme} />
+          </div>
 
           <div className="block">
             <svg
@@ -211,29 +195,33 @@ const HomePage = () => {
               ></path>
             </svg>
           </div>
-          <section
-            id="about"
-            className="bg-black flex flex-col justify-center md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center text-light"
-          >
-            <h1 className="poppins-semibold text-[32px]">
-              <span className="text-primary">#</span> About
-            </h1>
-            <div className="divider"></div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              ex laudantium illo, voluptas exercitationem tenetur expedita non
-              laboriosam aspernatur doloribus vitae necessitatibus fugiat
-              numquam rem officia voluptatum? Maiores, vero tenetur!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
-              possimus facilis officiis fuga delectus sequi dignissimos
-              perferendis doloribus esse amet, qui aliquam voluptates labore
-              iure quo inventore aliquid magni odio!
-            </p>
-            <div className="divider"></div>
-          </section>
-          <div>
+
+          <div ref={aboutSection}>
+            <section
+              id="about"
+              className="bg-black flex flex-col justify-center md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center text-light"
+            >
+              <h1 className="poppins-semibold text-[32px]">
+                <span className="text-primary">#</span> About
+              </h1>
+              <div className="divider"></div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                ex laudantium illo, voluptas exercitationem tenetur expedita non
+                laboriosam aspernatur doloribus vitae necessitatibus fugiat
+                numquam rem officia voluptatum? Maiores, vero tenetur!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ratione possimus facilis officiis fuga delectus sequi
+                dignissimos perferendis doloribus esse amet, qui aliquam
+                voluptates labore iure quo inventore aliquid magni odio!
+              </p>
+              <div className="divider"></div>
+            </section>
+          </div>
+
+          <div className="block">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
@@ -246,62 +234,69 @@ const HomePage = () => {
               ></path>
             </svg>
           </div>
-          <section
-            id="projects"
-            className="bg-light dark:bg-dark flex flex-col justify-center md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center"
-          >
-            <h1 className="poppins-semibold text-[32px]">
-              <span className="text-primary">#</span> Projects
-            </h1>
-            <div className="divider"></div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              ex laudantium illo, voluptas exercitationem tenetur expedita non
-              laboriosam aspernatur doloribus vitae necessitatibus fugiat
-              numquam rem officia voluptatum? Maiores, vero tenetur!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
-              possimus facilis officiis fuga delectus sequi dignissimos
-              perferendis doloribus esse amet, qui aliquam voluptates labore
-              iure quo inventore aliquid magni odio!
-            </p>
-            <div className="divider"></div>
-          </section>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            className="bg-light dark:bg-dark"
-          >
-            <path
-              fill={theme == "dark" ? "#1F384C" : "#1F384C"}
-              fillOpacity="1"
-              d="M0,192L48,181.3C96,171,192,149,288,160C384,171,480,213,576,234.7C672,256,768,256,864,245.3C960,235,1056,213,1152,202.7C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
-          <section
-            id="certificates"
-            className="bg-black flex flex-col md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center pb-72 text-light"
-          >
-            <h1 className="poppins-semibold text-[32px]">
-              <span className="text-primary">#</span> Certificates
-            </h1>
-            <div className="divider"></div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              ex laudantium illo, voluptas exercitationem tenetur expedita non
-              laboriosam aspernatur doloribus vitae necessitatibus fugiat
-              numquam rem officia voluptatum? Maiores, vero tenetur!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
-              possimus facilis officiis fuga delectus sequi dignissimos
-              perferendis doloribus esse amet, qui aliquam voluptates labore
-              iure quo inventore aliquid magni odio!
-            </p>
-            <div className="divider"></div>
-          </section>
 
+          <div ref={projectSection}>
+            <section
+              id="projects"
+              className="bg-light dark:bg-dark flex flex-col justify-center md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center"
+            >
+              <h1 className="poppins-semibold text-[32px]">
+                <span className="text-primary">#</span> Projects
+              </h1>
+              <div className="divider"></div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                ex laudantium illo, voluptas exercitationem tenetur expedita non
+                laboriosam aspernatur doloribus vitae necessitatibus fugiat
+                numquam rem officia voluptatum? Maiores, vero tenetur!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ratione possimus facilis officiis fuga delectus sequi
+                dignissimos perferendis doloribus esse amet, qui aliquam
+                voluptates labore iure quo inventore aliquid magni odio!
+              </p>
+              <div className="divider"></div>
+            </section>
+          </div>
+
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+              className="bg-light dark:bg-dark"
+            >
+              <path
+                fill={theme == "dark" ? "#1F384C" : "#1F384C"}
+                fillOpacity="1"
+                d="M0,192L48,181.3C96,171,192,149,288,160C384,171,480,213,576,234.7C672,256,768,256,864,245.3C960,235,1056,213,1152,202.7C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
+          <div ref={certificateSection}>
+            <section
+              id="certificates"
+              className="bg-black flex flex-col md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center pb-72 text-light"
+            >
+              <h1 className="poppins-semibold text-[32px]">
+                <span className="text-primary">#</span> Certificates
+              </h1>
+              <div className="divider"></div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                ex laudantium illo, voluptas exercitationem tenetur expedita non
+                laboriosam aspernatur doloribus vitae necessitatibus fugiat
+                numquam rem officia voluptatum? Maiores, vero tenetur!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ratione possimus facilis officiis fuga delectus sequi
+                dignissimos perferendis doloribus esse amet, qui aliquam
+                voluptates labore iure quo inventore aliquid magni odio!
+              </p>
+              <div className="divider"></div>
+            </section>
+          </div>
           <footer
             id="footer"
             className="bg-light text-dark  dark:bg-dark dark:text-light w-full text-center p-2"
