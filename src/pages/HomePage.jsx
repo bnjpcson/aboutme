@@ -60,7 +60,35 @@ const HomePage = () => {
     }
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const home =
+        homeSection.current.getBoundingClientRect().top + window.scrollY - 150;
+
+      const about =
+        aboutSection.current.getBoundingClientRect().top + window.scrollY - 150;
+
+      const projects =
+        projectSection.current.getBoundingClientRect().top +
+        window.scrollY -
+        150;
+
+      const certificates =
+        certificateSection.current.getBoundingClientRect().top +
+        window.scrollY -
+        150;
+
+      if (scrollY >= home && scrollY < about) {
+        setActive("home");
+      } else if (scrollY >= about && scrollY < projects) {
+        setActive("about");
+      } else if (scrollY >= projects && scrollY < certificates) {
+        setActive("projects");
+      } else if (scrollY > certificates) {
+        setActive("certificates");
+      }
+    });
+  }, []);
 
   const scrollTo = (offsetTop) => {
     window.scrollTo({
@@ -73,108 +101,106 @@ const HomePage = () => {
     <>
       <div className={theme}>
         <div
-          className={`bg-light text-dark dark:bg-dark dark:text-light min-h-screen`}
+          className={`bg-light text-dark dark:bg-dark dark:text-light min-h-screen min-w-min`}
         >
-          <div className="navbar fixed bg-light dark:bg-dark">
-            <div className="navbar-start">
-              <div className="dropdown">
-                <div
-                  tabIndex={0}
-                  role="button"
-                  className="btn btn-ghost lg:hidden"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+          <div className="flex justify-center">
+            <div className="navbar fixed bg-light dark:bg-dark max-w-[1920px]">
+              <div className="navbar-start">
+                <div className="dropdown">
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="btn btn-ghost lg:hidden"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h8m-8 6h16"
-                    />
-                  </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4 6h16M4 12h8m-8 6h16"
+                      />
+                    </svg>
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                  >
+                    <li>
+                      <a>Item 1</a>
+                    </li>
+                    <li>
+                      <a>Parent</a>
+                      <ul className="p-2">
+                        <li>
+                          <a>Submenu 1</a>
+                        </li>
+                        <li>
+                          <a>Submenu 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a>Item 3</a>
+                    </li>
+                  </ul>
                 </div>
-                <ul
-                  tabIndex={0}
-                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-                >
-                  <li>
-                    <a>Item 1</a>
-                  </li>
-                  <li>
-                    <a>Parent</a>
-                    <ul className="p-2">
-                      <li>
-                        <a>Submenu 1</a>
-                      </li>
-                      <li>
-                        <a>Submenu 2</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a>Item 3</a>
-                  </li>
-                </ul>
+                <a className="btn btn-ghost">
+                  <div className="text-[24px] poppins-bold">
+                    <span className="tracking-widest">Bnj</span>
+                    <span className="text-primary tracking-widest">pcson</span>
+                  </div>
+                </a>
               </div>
-              <a className="btn btn-ghost">
-                <div className="text-[24px] poppins-bold">
-                  <span className="tracking-widest">Bnj</span>
-                  <span className="text-primary tracking-widest">pcson</span>
-                </div>
-              </a>
-            </div>
-            <ul className="flex-row gap-5 lg:flex hidden">
-              <li
-                className={navStyle("home")}
-                onClick={() => {
-                  setActive("home");
-                  scrollTo(homeSection.current.offsetTop);
-                }}
-              >
-                Home
-              </li>
-              <li
-                className={navStyle("about")}
-                onClick={() => {
-                  setActive("about");
-                  scrollTo(aboutSection.current.offsetTop);
-                }}
-              >
-                About
-              </li>
-              <li
-                className={navStyle("projects")}
-                onClick={() => {
-                  setActive("projects");
-                  scrollTo(projectSection.current.offsetTop);
-                }}
-              >
-                Projects
-              </li>
-              <li
-                className={navStyle("certificates")}
-                onClick={() => {
-                  setActive("certificates");
-                  scrollTo(certificateSection.current.offsetTop);
-                }}
-              >
-                Certificates
-              </li>
-            </ul>
-            <div className="navbar-end">
-              <button
-                className="btn btn-ghost"
-                onClick={() => {
-                  changeTheme();
-                }}
-              >
-                {theme == "dark" ? sunIcon : moonIcon}
-              </button>
+              <ul className="flex-row gap-5 lg:flex hidden">
+                <li
+                  className={navStyle("home")}
+                  onClick={() => {
+                    scrollTo(homeSection.current.offsetTop);
+                  }}
+                >
+                  Home
+                </li>
+                <li
+                  className={navStyle("about")}
+                  onClick={() => {
+                    scrollTo(aboutSection.current.offsetTop);
+                  }}
+                >
+                  About
+                </li>
+                <li
+                  className={navStyle("projects")}
+                  onClick={() => {
+                    scrollTo(projectSection.current.offsetTop);
+                  }}
+                >
+                  Projects
+                </li>
+                <li
+                  className={navStyle("certificates")}
+                  onClick={() => {
+                    scrollTo(certificateSection.current.offsetTop);
+                  }}
+                >
+                  Certificates
+                </li>
+              </ul>
+              <div className="navbar-end">
+                <button
+                  className="btn btn-ghost"
+                  onClick={() => {
+                    changeTheme();
+                  }}
+                >
+                  {theme == "dark" ? sunIcon : moonIcon}
+                </button>
+              </div>
             </div>
           </div>
 
@@ -199,7 +225,7 @@ const HomePage = () => {
           <div ref={aboutSection}>
             <section
               id="about"
-              className="bg-black flex flex-col justify-center md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center text-light"
+              className="bg-black flex flex-col md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center text-light min-h-screen"
             >
               <h1 className="poppins-semibold text-[32px]">
                 <span className="text-primary">#</span> About
@@ -238,7 +264,7 @@ const HomePage = () => {
           <div ref={projectSection}>
             <section
               id="projects"
-              className="bg-light dark:bg-dark flex flex-col justify-center md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center"
+              className="bg-light dark:bg-dark flex flex-col md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center  min-h-screen"
             >
               <h1 className="poppins-semibold text-[32px]">
                 <span className="text-primary">#</span> Projects
@@ -276,7 +302,7 @@ const HomePage = () => {
           <div ref={certificateSection}>
             <section
               id="certificates"
-              className="bg-black flex flex-col md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center pb-72 text-light"
+              className="bg-black flex flex-col md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center pb-72 text-light  min-h-screen"
             >
               <h1 className="poppins-semibold text-[32px]">
                 <span className="text-primary">#</span> Certificates

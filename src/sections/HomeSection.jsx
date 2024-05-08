@@ -52,9 +52,14 @@ const HomeSection = ({ theme }) => {
 
   return (
     <section id="home" className="flex flex-col items-center">
-      <div className="flex flex-col justify-center items-center pt-40 max-w-5xl px-5 sm:px-10">
+      <div className="flex flex-col justify-center items-center pt-32 max-w-5xl px-5 sm:px-10">
         <div className="flex flex-row justify-center items-start">
           <div className="flex flex-col w-full gap-3">
+            <img
+              className="aspect-auto w-20 rounded-full sm:hidden"
+              src={profile}
+              alt=""
+            />
             <h1 className="poppins-bold text-[48px]">
               Web & Mobile <span className="text-primary">Developer</span>
             </h1>
@@ -62,22 +67,26 @@ const HomeSection = ({ theme }) => {
               Hi! I'm Benjie, specialized in web and mobile technologies.
             </p>
             <div className="flex flex-row gap-5 py-5">
-              <button
-                className="btn btn-outline btn-info dark:btn-secondary "
-                onClick={() => {
-                  document.getElementById("my_modal").showModal();
-                }}
-              >
-                View my projects
-              </button>
-              <button
-                className="btn btn-outline btn-primary"
-                onClick={() => {
-                  document.getElementById("my_modal").showModal();
-                }}
-              >
-                Download CV
-              </button>
+              <div>
+                <button
+                  className="btn btn-outline btn-info dark:btn-secondary w-full"
+                  onClick={() => {
+                    document.getElementById("my_modal").showModal();
+                  }}
+                >
+                  View my projects
+                </button>
+              </div>
+              <div>
+                <button
+                  className="btn btn-outline btn-primary w-full"
+                  onClick={() => {
+                    document.getElementById("my_modal").showModal();
+                  }}
+                >
+                  Download CV
+                </button>
+              </div>
             </div>
             <div className="flex flex-row w-full justify-between pr-5">
               <a href="https://www.linkedin.com/in/bnjpcson/" target="_blank">
