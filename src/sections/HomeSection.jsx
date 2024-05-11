@@ -51,7 +51,7 @@ const HomeSection = ({ theme }) => {
   );
 
   return (
-    <section id="home" className="flex flex-col items-center">
+    <section id="home" className="flex flex-col items-center max-w-[1920px]">
       <div className="flex flex-col justify-center items-center pt-32 max-w-5xl px-5 sm:px-10">
         <div className="flex flex-row justify-center items-start">
           <div className="flex flex-col w-full gap-3">
