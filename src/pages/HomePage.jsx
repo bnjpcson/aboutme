@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import UnderConstructionComponent from "../components/UnderConstructionComponent";
 import HomeSection from "../sections/HomeSection";
+import AboutSection from "../sections/AboutSection";
+import ProjectSection from "../sections/ProjectSection";
+import CertificateSection from "../sections/CertificateSection";
 
 const HomePage = () => {
   const getTheme = () => {
@@ -104,7 +107,7 @@ const HomePage = () => {
           className={`bg-light text-dark dark:bg-dark dark:text-light min-h-screen min-w-min`}
         >
           <div className="flex justify-center">
-            <div className="navbar fixed bg-light dark:bg-dark max-w-[1920px]">
+            <div className="navbar fixed bg-light dark:bg-dark max-w-[1920px] z-10">
               <div className="navbar-start">
                 <div className="dropdown">
                   <div
@@ -204,15 +207,15 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div ref={homeSection}>
+          <div ref={homeSection} className="flex justify-center">
             <HomeSection theme={theme} />
           </div>
 
-          <div className="block">
+          <div className="flex justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
-              className="bg-black"
+              className="bg-black w-full max-w-[1920px]"
             >
               <path
                 fill={theme == "dark" ? "#44546a" : "#EFF2F4"}
@@ -222,36 +225,15 @@ const HomePage = () => {
             </svg>
           </div>
 
-          <div ref={aboutSection}>
-            <section
-              id="about"
-              className="bg-black flex flex-col md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center text-light min-h-screen"
-            >
-              <h1 className="poppins-semibold text-[32px]">
-                <span className="text-primary">#</span> About
-              </h1>
-              <div className="divider"></div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                ex laudantium illo, voluptas exercitationem tenetur expedita non
-                laboriosam aspernatur doloribus vitae necessitatibus fugiat
-                numquam rem officia voluptatum? Maiores, vero tenetur!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Ratione possimus facilis officiis fuga delectus sequi
-                dignissimos perferendis doloribus esse amet, qui aliquam
-                voluptates labore iure quo inventore aliquid magni odio!
-              </p>
-              <div className="divider"></div>
-            </section>
+          <div ref={aboutSection} className="flex justify-center">
+            <AboutSection theme={theme} />
           </div>
 
-          <div className="block">
+          <div className="flex justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
-              className="bg-black"
+              className="bg-black w-full max-w-[1920px]"
             >
               <path
                 fill={theme == "dark" ? "#44546a" : "#EFF2F4"}
@@ -261,36 +243,15 @@ const HomePage = () => {
             </svg>
           </div>
 
-          <div ref={projectSection}>
-            <section
-              id="projects"
-              className="bg-light dark:bg-dark flex flex-col md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center  min-h-screen"
-            >
-              <h1 className="poppins-semibold text-[32px]">
-                <span className="text-primary">#</span> Projects
-              </h1>
-              <div className="divider"></div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                ex laudantium illo, voluptas exercitationem tenetur expedita non
-                laboriosam aspernatur doloribus vitae necessitatibus fugiat
-                numquam rem officia voluptatum? Maiores, vero tenetur!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Ratione possimus facilis officiis fuga delectus sequi
-                dignissimos perferendis doloribus esse amet, qui aliquam
-                voluptates labore iure quo inventore aliquid magni odio!
-              </p>
-              <div className="divider"></div>
-            </section>
+          <div ref={projectSection} className="flex justify-center">
+            <ProjectSection theme={theme} />
           </div>
 
-          <div>
+          <div className="flex justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
-              className="bg-light dark:bg-dark"
+              className="bg-light dark:bg-dark w-full max-w-[1920px]"
             >
               <path
                 fill={theme == "dark" ? "#1F384C" : "#1F384C"}
@@ -299,29 +260,8 @@ const HomePage = () => {
               ></path>
             </svg>
           </div>
-          <div ref={certificateSection}>
-            <section
-              id="certificates"
-              className="bg-black flex flex-col md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center pb-72 text-light  min-h-screen"
-            >
-              <h1 className="poppins-semibold text-[32px]">
-                <span className="text-primary">#</span> Certificates
-              </h1>
-              <div className="divider"></div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                ex laudantium illo, voluptas exercitationem tenetur expedita non
-                laboriosam aspernatur doloribus vitae necessitatibus fugiat
-                numquam rem officia voluptatum? Maiores, vero tenetur!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Ratione possimus facilis officiis fuga delectus sequi
-                dignissimos perferendis doloribus esse amet, qui aliquam
-                voluptates labore iure quo inventore aliquid magni odio!
-              </p>
-              <div className="divider"></div>
-            </section>
+          <div ref={certificateSection} className="flex justify-center">
+            <CertificateSection theme={theme} />
           </div>
           <footer
             id="footer"

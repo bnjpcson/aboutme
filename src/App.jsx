@@ -4,7 +4,9 @@ import HomePage from "./pages/HomePage";
 function App() {
   return (
     <>
-      <HomePage />
+      <div className="text-[18px] md:text-[16px]">
+        <HomePage />
+      </div>
     </>
   );
 }
