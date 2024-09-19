@@ -68,27 +68,31 @@ const HomePage = () => {
       const home =
         homeSection.current.getBoundingClientRect().top + window.scrollY - 150;
 
-      const about =
-        aboutSection.current.getBoundingClientRect().top + window.scrollY - 150;
+      // const about =
+      //   aboutSection.current.getBoundingClientRect().top + window.scrollY - 150;
 
-      const projects =
-        projectSection.current.getBoundingClientRect().top +
-        window.scrollY -
-        150;
+      // const projects =
+      //   projectSection.current.getBoundingClientRect().top +
+      //   window.scrollY -
+      //   150;
 
-      const certificates =
-        certificateSection.current.getBoundingClientRect().top +
-        window.scrollY -
-        150;
+      // const certificates =
+      //   certificateSection.current.getBoundingClientRect().top +
+      //   window.scrollY -
+      //   150;
 
-      if (scrollY >= home && scrollY < about) {
+      // if (scrollY >= home && scrollY < about) {
+      //   setActive("home");
+      // } else if (scrollY >= about && scrollY < projects) {
+      //   setActive("about");
+      // } else if (scrollY >= projects && scrollY < certificates) {
+      //   setActive("projects");
+      // } else if (scrollY > certificates) {
+      //   setActive("certificates");
+      // }
+
+      if (scrollY >= home) {
         setActive("home");
-      } else if (scrollY >= about && scrollY < projects) {
-        setActive("about");
-      } else if (scrollY >= projects && scrollY < certificates) {
-        setActive("projects");
-      } else if (scrollY > certificates) {
-        setActive("certificates");
       }
     });
   }, []);
@@ -172,7 +176,8 @@ const HomePage = () => {
                 <li
                   className={navStyle("about")}
                   onClick={() => {
-                    scrollTo(aboutSection.current.offsetTop);
+                    // scrollTo(aboutSection.current.offsetTop);
+                    document.getElementById("my_modal").showModal();
                   }}
                 >
                   About
@@ -180,7 +185,8 @@ const HomePage = () => {
                 <li
                   className={navStyle("projects")}
                   onClick={() => {
-                    scrollTo(projectSection.current.offsetTop);
+                    // scrollTo(projectSection.current.offsetTop);
+                    document.getElementById("my_modal").showModal();
                   }}
                 >
                   Projects
@@ -188,7 +194,8 @@ const HomePage = () => {
                 <li
                   className={navStyle("certificates")}
                   onClick={() => {
-                    scrollTo(certificateSection.current.offsetTop);
+                    // scrollTo(certificateSection.current.offsetTop);
+                    document.getElementById("my_modal").showModal();
                   }}
                 >
                   Certificates
@@ -225,11 +232,11 @@ const HomePage = () => {
             </svg>
           </div>
 
-          <div ref={aboutSection} className="flex justify-center">
+          {/* <div ref={aboutSection} className="flex justify-center">
             <AboutSection theme={theme} />
-          </div>
+          </div> */}
 
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
@@ -260,10 +267,11 @@ const HomePage = () => {
               ></path>
             </svg>
           </div>
+
           <div ref={certificateSection} className="flex justify-center">
             <CertificateSection theme={theme} />
-          </div>
-          <footer
+          </div> */}
+          {/* <footer
             id="footer"
             className="bg-light text-dark  dark:bg-dark dark:text-light w-full text-center p-2"
           >
@@ -271,12 +279,12 @@ const HomePage = () => {
               ​© {new Date().getFullYear()} <strong>Benjie Pecson</strong>. All
               Rights Reserved
             </span>
-          </footer>
+          </footer> */}
         </div>
       </div>
 
       <dialog id="my_modal" className="modal">
-        <div className="modal-box w-11/12 max-w-5xl">
+        <div className="modal-box ">
           <h3 className="font-bold text-lg">Hello!</h3>
           <UnderConstructionComponent />
           <div className="modal-action">

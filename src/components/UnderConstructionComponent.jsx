@@ -2,9 +2,9 @@ import React from "react";
 
 const UnderConstructionComponent = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-4 text-center">
+    <div className="flex flex-col justify-center items-center gap-4 text-center py-10">
       <svg
-        className="w-[250px] md:w-96 md:h-96"
+        className="w-1/2"
         viewBox="0 0 752 670"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
