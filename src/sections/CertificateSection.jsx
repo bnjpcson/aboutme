@@ -7,7 +7,7 @@ const CertificateSection = ({ theme }) => {
       id="certificates"
       className="flex flex-col items-center w-full bg-black max-w-[1920px]"
     >
-      <div className="flex flex-col md:px-50 lg:px-60 md:px-20 sm:px-10 px-5 items-center text-light min-h-screen  max-w-5xl">
+      <div className="flex flex-col px-5 py-10 text-light min-h-screen  max-w-5xl">
         <h1 className="poppins-semibold text-4xl md:text-3xl">
           <span className="text-primary">#</span> Certificates
         </h1>
