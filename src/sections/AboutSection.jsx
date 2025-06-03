@@ -82,7 +82,7 @@ const AboutSection = ({ theme }) => {
   };
 
   useEffect(() => {
-    console.log(experiences);
+    // console.log(experiences);
   }, []);
 
   return (
