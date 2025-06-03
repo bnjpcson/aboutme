@@ -1,5 +1,6 @@
 import React from "react";
 import profile from "../assets/images/image1.jpg";
+import UnderConstructionComponent from "../components/UnderConstructionComponent";
 
 const ProjectSection = ({ theme }) => {
   return (
