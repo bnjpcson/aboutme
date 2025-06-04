@@ -106,7 +106,13 @@ function App() {
   };
 
   const LogoBtn = (
-    <a className="btn btn-ghost">
+    <a
+      className="btn btn-ghost"
+      onClick={(e) => {
+        e.preventDefault();
+        scrollTo(homeSection.current.offsetTop);
+      }}
+    >
       <div className="text-[24px] poppins-bold">
         <span className="tracking-widest">Bnj</span>
         <span className="text-primary tracking-widest">pcson</span>

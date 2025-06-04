@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import CountUp from "../reactbits/CountUp";
 import Squares from "../reactbits/Squares";
+import SplitText from "../reactbits/SplitText";
+import RotatingText from "../reactbits/RotatingText";
+import ShinyText from "../reactbits/ShinyText";
 
 const AboutSection = ({ theme }) => {
   const experiencesData = [
@@ -91,9 +94,11 @@ const AboutSection = ({ theme }) => {
       className="flex flex-col items-center w-full bg-black max-w-[1920px]"
     >
       <div className="flex flex-col px-5 items-center text-light min-h-screen max-w-5xl pb-20 w-full">
-        <h1 className="poppins-semibold text-5xl md:text-4xl text-center">
-          <span className="text-primary">#</span> About
+        <h1 className="poppins-semibold text-5xl md:text-4xl text-center flex items-center gap-3">
+          <span className="text-light">#</span>
+          <ShinyText text={"About"} speed={5} className="bg-primary py-3" />
         </h1>
+
         <div className="divider"></div>
 
         <div className="flex flex-col lg:flex-row items-start justify-start w-full">
@@ -129,11 +134,11 @@ const AboutSection = ({ theme }) => {
                                     separator=","
                                     direction="up"
                                     duration={1}
-                                    className="count-up-text text-4xl poppins-bold text-light"
+                                    className="count-up-text text-7xl poppins-bold text-light"
                                     key={`countup-${count.label}-${restartKey}`} // force rerender
                                   />
                                   {count.plus && (
-                                    <span className="text-lg poppins-bold text-light">
+                                    <span className=" poppins-bold text-4xl text-light">
                                       +
                                     </span>
                                   )}

@@ -6,6 +6,8 @@ import {
   instagramIcon,
   linkedinIcon,
 } from "../components/GetIcons";
+import RotatingText from "../reactbits/RotatingText";
+import ShinyText from "../reactbits/ShinyText";
 
 const HomeSection = ({ theme, scrollTo, homeSection }) => {
   return (
@@ -18,9 +20,21 @@ const HomeSection = ({ theme, scrollTo, homeSection }) => {
               src={profile}
               alt=""
             />
-            <h1 className="poppins-bold text-[48px]">
-              Web & Mobile <span className="text-primary">Developer</span>
-            </h1>
+            <div className="flex">
+              <RotatingText
+                texts={["Web", "Mobile", "Software"]}
+                mainClassName={`px-2 sm:px-2 md:px-3 bg-primary text-white poppins-bold text-[48px] overflow-hidden sm:py-1 md:py-2 justify-center rounded-lg`}
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={2000}
+              />
+            </div>
+            <h1 className="poppins-bold text-[48px]">Developer</h1>
             <p className="poppins-regular text-[16px]">
               Hi! I'm Benjie, specialized in web and mobile technologies.
             </p>

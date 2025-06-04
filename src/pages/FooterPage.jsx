@@ -34,8 +34,8 @@ const FooterPage = ({ theme, LogoBtn }) => {
       id="footer"
       className="bg-light text-dark  dark:bg-dark dark:text-light w-full text-center flex flex-col justify-center items-center py-16 px-5 sm:px-10"
     >
-      <div className="flex flex-col lg:flex-row gap-3 w-full justify-between items-center">
-        <div className="flex flex-col gap-3 max-w-lg items-center justify-center">
+      <div className="flex flex-col lg:flex-row gap-3 w-full justify-center items-center">
+        {/* <div className="flex flex-col gap-3 max-w-lg items-center justify-center">
           {LogoBtn}
           <div
             dangerouslySetInnerHTML={{
@@ -45,9 +45,10 @@ const FooterPage = ({ theme, LogoBtn }) => {
               ).body.innerHTML,
             }}
           />
-        </div>
+        </div> */}
         <div className="flex flex-col justify-around gap-10 lg:mr-10">
-          <div className="flex flex-row w-full justify-between mt-5">
+          <div className="">{LogoBtn}</div>
+          <div className="flex flex-row w-full justify-between">
             <a href="https://www.linkedin.com/in/bnjpcson/" target="_blank">
               {linkedinIcon(theme)}
             </a>
