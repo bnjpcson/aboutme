@@ -32,11 +32,11 @@ const HomePage = ({
             />
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center border border-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
-              className="bg-black w-full max-w-[1920px]"
+              className="bg-black w-full max-w-[1920px] border border-none"
             >
               <path
                 fill={theme == "dark" ? "#44546a" : "#EFF2F4"}

@@ -11,6 +11,20 @@ export default {
         white: "#EFF2F4",
         primary: "#ed7d32",
       },
+      keyframes: {
+        shine: {
+          "0%": { "background-position": "100%" },
+          "100%": { "background-position": "-100%" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        shine: "shine 5s linear infinite",
+        marquee: "marquee 15s linear infinite",
+      },
     },
   },
   plugins: [require("daisyui")],
