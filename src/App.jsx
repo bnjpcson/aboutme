@@ -68,6 +68,7 @@ function App() {
   };
 
   useEffect(() => {
+    window.location.href = "https://bnjpcson.vercel.app/";
     window.addEventListener("scroll", () => {
       const home =
         homeSection.current.getBoundingClientRect().top + window.scrollY - 150;
@@ -120,7 +121,7 @@ function App() {
     </a>
   );
 
-  return (
+  const OldContent = () => {
     <>
       <div className={theme}>
         <div
@@ -295,6 +296,27 @@ function App() {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </>;
+  };
+
+  return (
+    <>
+      <div className={theme}>
+        <div
+          className={`bg-light text-dark dark:bg-dark dark:text-light min-h-screen min-w-min flex flex-col items-center justify-center`}
+        >
+          <h1>
+            There's a new version of my{" "}
+            <a
+              href="https://bnjpcson.vercel.app/"
+              className="underline text-blue-400"
+            >
+              portfolio
+            </a>
+            !
+          </h1>
         </div>
       </div>
     </>
